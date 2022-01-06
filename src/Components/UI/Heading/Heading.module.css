@@ -1,0 +1,30 @@
+.Heading{
+    font-family: 'Poppins', sans-serif;
+    margin: 50px auto;
+    padding: 20px auto;
+}
+
+.Heading h3{
+    color: #4c494d;
+    font-size: 40px;
+    font-weight: normal;
+}
+
+.Heading h1{
+    color: #da3ffc;
+    font-size: 60px;
+    font-weight: normal;
+}
+    
+
+.pinkBackground{
+    background-color: #da3ffc;
+    border-radius: 10px;
+    color: white;
+    padding: 10px ;
+    font-weight: bolder;
+}
+
+
+
+/* da3ffc */
