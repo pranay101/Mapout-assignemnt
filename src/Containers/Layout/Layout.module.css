@@ -1,0 +1,15 @@
+.Layout{
+    background-color: #f6dcfc;
+    width: 100%;
+    height: auto;
+}
+
+.Layout header{
+    padding: 20px 30px;
+}
+
+.Layout main{
+    margin: auto;
+    position: relative;
+    text-align: center;
+}
