@@ -12,7 +12,7 @@
 
 .Heading h1{
     color: #da3ffc;
-    font-size: 60px;
+    font-size: 4rem;
     font-weight: normal;
 }
     
@@ -25,6 +25,24 @@
     font-weight: bolder;
 }
 
+
+
+
+@media (max-width:800px) {
+    .Heading h1{
+        font-size: 2.5rem;
+
+    }
+}
+
+@media (max-width:450px) {
+    .Heading h1{
+        font-size: 1.5rem;
+    }
+    .Heading h3{
+        font-size: 25px;
+    }
+}
 
 
 /* da3ffc */
