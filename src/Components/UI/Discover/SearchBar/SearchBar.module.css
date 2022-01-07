@@ -1,0 +1,15 @@
+.SearchBar{
+    max-width: 80%;
+    margin: 20px auto;
+    position: relative;
+    padding: 20px 0;
+}
+
+.SearchBar .SearchInput{
+    padding: 10px 10px;
+}
+
+.SearchBar Form{
+    display: flex;
+    justify-content: center;
+}

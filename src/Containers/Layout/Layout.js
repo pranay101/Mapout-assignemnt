@@ -1,7 +1,7 @@
 import classes from "./Layout.module.css";
 import Logo from "../../Components/UI/Logo/Logo";
 import Heading from "../../Components/UI/Heading/Heading";
-import SearchBar from "../../Components/UI/SearchBar/SearchBar";
+import Discover from "../../Components/UI/Discover/Discover";
 
 const Layout = () => {
   return (
@@ -11,7 +11,7 @@ const Layout = () => {
       </header>
       <main>
         <Heading />
-        <SearchBar />
+        <Discover />
       </main>
     </div>
   );
