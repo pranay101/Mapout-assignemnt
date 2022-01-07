@@ -1,0 +1,48 @@
+.DropDown {
+  position: relative;
+  z-index: 1;
+  width: 60%;
+}
+
+.Dropwn__Container {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04),
+    0 4px 16px 0 rgba(44, 50, 65, 0.08);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.DropDown__container {
+    background: rgba(255, 255, 255, 0.95);
+    background: var(--color-SearchBar-background, rgba(255, 255, 255, 0.95));
+    display: -webkit-box;
+    display: flex;
+    border: none;
+    border-radius: 6px;
+    z-index: 1;
+  }
+  .DropDown__container select {
+    display: block;
+    font-size: 17px;
+    line-height: 22px;
+    font-weight: 300;
+    margin-top: 0;
+    margin-bottom: 0;
+    -webkit-box-flex: 1;
+    flex: 1;
+    border-radius: 6px;
+    background: transparent;
+    border: #e99bfa 1px solid;
+    color: #1a1a1a;
+    padding: 0.9rem 1.25rem;
+    z-index: 1;
+    font-weight: 300;
+    font-size: 17px;
+    width: 100%;
+  }
+
+
+  .Option {
+      background-color: #fff;
+  }
+  
+  

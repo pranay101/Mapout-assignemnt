@@ -1,15 +1,102 @@
-.SearchBar{
-    max-width: 80%;
-    margin: 20px auto;
-    position: relative;
-    padding: 20px 0;
+
+.SearchBar {
+  position: relative;
+  z-index: 1;
+  width: 60%;
+}
+.SearchBar[data-focused="true"] .SearchBar__container,
+.SearchBar:focus-within .SearchBar__container {
+  background: #fff;
+  background: var(--color-SearchBar-background-focus, #fff);
+}
+.SearchBar--open .SearchBar__container {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04),
+    0 4px 16px 0 rgba(44, 50, 65, 0.08);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
-.SearchBar .SearchInput{
-    padding: 10px 10px;
+.SearchBar__container {
+  background: rgba(255, 255, 255, 0.95);
+  background: var(--color-SearchBar-background, rgba(255, 255, 255, 0.95));
+  display: -webkit-box;
+  display: flex;
+  border: none;
+  border-radius: 6px;
+  z-index: 1;
+}
+.SearchBar__container input {
+  display: block;
+  font-size: 17px;
+  line-height: 22px;
+  font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 0;
+  -webkit-box-flex: 1;
+  flex: 1;
+  border-radius: 6px;
+  background: transparent;
+  border: #e99bfa 1px solid;
+  color: #1a1a1a;
+  padding: 0.9rem 1.25rem;
+  z-index: 1;
+  font-weight: 300;
+  font-size: 17px;
+  width: 100%;
 }
 
-.SearchBar Form{
-    display: flex;
-    justify-content: center;
+
+.SearchBar__container input:focus{
+    border-color: #da3ffc;
+}
+@media (max-width: 849px) {
+  .SearchBar__container input {
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+    font-weight: 500;
+  }
+}
+.SearchBar__container input::-webkit-input-placeholder {
+  color: #5e5e5e;
+  color: var(--color-SearchBar-placeholder, #5e5e5e);
+}
+.SearchBar__container input::-moz-placeholder {
+  color: #5e5e5e;
+  color: var(--color-SearchBar-placeholder, #5e5e5e);
+}
+.SearchBar__container input:-ms-input-placeholder {
+  color: #5e5e5e;
+  color: var(--color-SearchBar-placeholder, #5e5e5e);
+}
+.SearchBar__container input::-ms-input-placeholder {
+  color: #5e5e5e;
+  color: var(--color-SearchBar-placeholder, #5e5e5e);
+}
+.SearchBar__container input::placeholder {
+  color: #5e5e5e;
+  color: var(--color-SearchBar-placeholder, #5e5e5e);
+}
+.SearchBar__container button {
+  border: none;
+  background: 0 0;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  padding: 0 1rem;
+  cursor: pointer;
+  z-index: 1;
+}
+.SearchBar__container button .rd__svg-icon {
+  fill: #5e5e5e;
+  width: 25px;
+  height: 25px;
+}
+.SearchBar--jumbo input {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
 }

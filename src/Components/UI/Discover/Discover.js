@@ -7,8 +7,8 @@ const Discover = () => {
   return (
     <div className={classes.Discover}>
       <form className={classes.Form}>
-        <SearchBar />
         <CountryPicker />
+        {/* <SearchBar /> */}
       </form>
     </div>
   );

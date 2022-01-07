@@ -1,13 +1,13 @@
-import classes from "./SearchBar.module.css"
+import classes from "./SearchBar.module.css";
 
 const SearchBar = () => {
   return (
-    <div className={classes.SearchInput}>
-      <p>Enter Keywords</p>
-      <input type="text" placeholder="Text" />
+    <div className={classes.SearchBar}>
+      <div className={classes.SearchBar__container}>
+        <input type="text" placeholder="Enter Keywords" />
+      </div>
     </div>
   );
 };
 
-
-export default SearchBar
+export default SearchBar;
