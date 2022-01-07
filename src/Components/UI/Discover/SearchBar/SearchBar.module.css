@@ -3,6 +3,8 @@
   position: relative;
   z-index: 1;
   width: 60%;
+  display: block;
+margin: auto;
 }
 .SearchBar[data-focused="true"] .SearchBar__container,
 .SearchBar:focus-within .SearchBar__container {

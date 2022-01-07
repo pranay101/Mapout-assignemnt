@@ -2,7 +2,7 @@ import classes from "./CountryPicker.module.css";
 import { useState, useEffect } from "react";
 import Countries from "./Countries.json";
 
-const CountryPicker = () => {
+const CountryPicker = (props) => {
   const countries_list = [];
   const [CountryListState, setCountryListState] = useState([]);
   const [CountryValue, setCountryValue] = useState("Choose Your Country");
@@ -17,8 +17,9 @@ const CountryPicker = () => {
   }, []);
 
   const CountrySelectorHandler = (event) => {
-    console.log(event.target.value);
+    // console.log(event.target.value);
     setCountryValue(event.target.value);
+    props.onPicked(event.target.value)
   };
 
   const renderCountry = (country) => {

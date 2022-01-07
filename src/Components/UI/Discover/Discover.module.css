@@ -3,10 +3,12 @@
     margin: 20px auto;
     position: relative;
     padding: 20px 0;
+    height: auto;
+    display: block;
+    text-align: center;
 }
 
 
 .Discover Form{
-    display: flex;
-    justify-content: center;
+   margin: auto;
 }
