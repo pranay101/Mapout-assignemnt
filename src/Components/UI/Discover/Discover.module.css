@@ -4,11 +4,10 @@
     position: relative;
     padding: 20px 0;
     height: auto;
-    display: block;
     text-align: center;
 }
 
-
-.Discover Form{
-   margin: auto;
+.DiscoverElement{
+    margin: 20px auto 40px auto;
+    padding: 10px 5px;
 }

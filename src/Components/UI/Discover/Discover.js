@@ -4,19 +4,20 @@ import SearchBar from "./SearchBar/SearchBar";
 import CountryPicker from "./CountryPicker/CountryPicker";
 
 const Discover = () => {
-  const [countryPicked,setCountryPicked] = useState(null)
+  const [countryPicked, setCountryPicked] = useState(null);
 
-  const onCountryPickedHandler = (selectedCountry) =>{
-    setCountryPicked(selectedCountry)
+  const onCountryPickedHandler = (selectedCountry) => {
+    setCountryPicked(selectedCountry);
     console.log(selectedCountry);
-  } 
+  };
   return (
     <div className={classes.Discover}>
-      <form className={classes.Form}>
-        <CountryPicker onPicked = {onCountryPickedHandler} />
-        
-        { countryPicked ? <SearchBar /> : null  }
-      </form>
+      <div className={classes.DiscoverElement}>
+        <CountryPicker onPicked={onCountryPickedHandler} />
+      </div>
+      <div className={classes.DiscoverElement}>
+        {countryPicked ? <SearchBar /> : null}
+      </div>
     </div>
   );
 };

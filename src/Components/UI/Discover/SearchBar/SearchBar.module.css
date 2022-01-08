@@ -1,10 +1,10 @@
-
 .SearchBar {
   position: relative;
   z-index: 1;
   width: 60%;
   display: block;
-margin: auto;
+  margin: 20px auto;
+  margin: auto;
 }
 .SearchBar[data-focused="true"] .SearchBar__container,
 .SearchBar:focus-within .SearchBar__container {
@@ -47,9 +47,8 @@ margin: auto;
   width: 100%;
 }
 
-
-.SearchBar__container input:focus{
-    border-color: #da3ffc;
+.SearchBar__container input:focus {
+  border-color: #da3ffc;
 }
 @media (max-width: 849px) {
   .SearchBar__container input {
@@ -101,4 +100,25 @@ margin: auto;
 .SearchBar--jumbo input {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
+}
+
+/* .SearchBar p{
+  font-family: 'Poppins', sans-serif;
+  color: #4c494d;
+  font-size: 16px;
+} */
+
+.SearchBar p {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid  #4c494d;
+  line-height: 0.1em;
+  margin: 50px 0 ;
+  color: #4c494d;
+  font-size: 16px;
+}
+
+.SearchBar p span {
+  background-color: #f6dcfc;
+  padding: 0 10px;
 }

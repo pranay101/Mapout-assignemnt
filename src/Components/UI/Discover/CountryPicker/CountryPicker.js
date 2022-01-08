@@ -32,7 +32,9 @@ const CountryPicker = (props) => {
 
   return (
     <div className={classes.DropDown}>
-      <p>Choose Country</p>
+      <p>
+        <span>Pick Your Country.</span>
+      </p>
       <div className={classes.DropDown__container}>
         <select defaultValue={CountryValue} onChange={CountrySelectorHandler}>
           {CountryListState.map((country) => {

@@ -48,3 +48,18 @@ margin: auto;
   }
   
   
+  .DropDown p {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid  #4c494d;
+    line-height: 0.1em;
+    margin: 50px 0 ; 
+    color: #4c494d;
+    font-size: 16px;
+  }
+  
+  .DropDown p span {
+    background-color: #f6dcfc;
+    padding: 0 10px;
+  }
+  
