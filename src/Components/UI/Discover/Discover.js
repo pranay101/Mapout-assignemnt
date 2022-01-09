@@ -40,10 +40,11 @@ const Discover = (props) => {
         axios(config)
           .then(function (response) {
             if(response.data.length === 0)
-              props.dataFetchtoLayout(JSON.stringify("No jobs found"));
+              props.dataFetchtoLayout(null);
 
 
-            props.dataFetchtoLayout(JSON.stringify(response.data));
+            props.dataFetchtoLayout(response.data);
+            // props.dataFetchtoLayout(JSON.stringify(response.data));
           })
           .catch(function (error) {
             console.log(error);

@@ -1,58 +1,50 @@
+import { useState } from "react";
 import classes from "./Jobcard.module.css";
 
-const data = {
-  title: "AWS Java Developer",
-  company: "tcg digital solutions pvt ltd",
-  location: "Kolkata, West Bengal",
-  jd: "Experience 3 to 5 yearsDesired SkillsAWS Knowledge (must have) Lambda, AppSync, Dynamo DBJS (must have) Node.JSRequired Skills:AWS Knowledge (preferred to have) API Gateway, EC2, Step Function, Cloudwatch, EKS. CloudFormationLanguage (good to have) Java , J2EE, JMS, Hibernate, Micro Service, Spring boot, Spring Cloud, Spring Integration.Other (good to have) JMS(Like MQ, Tibco), Kafka/KinesisDatabase (good to have) Oracle, Any No SQL DB like Couchbase, MongoDBJS (good to have) Angular/React JSMust be a developer who has built the solutions using Java before and now providing solutions using AWS/Java/JS.",
-  link: "https://www.timesjobs.com/job-detail/aws-java-developer-tcg-digital-solutions-pvt-ltd-kolkata-3-to-5-yrs-jobid-eoIK3g1FIzlzpSvf__PLUS__uAgZw==?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
-  logo: "",
-  postingDate: "2 days ago",
-  jobtype: "Full-time",
-  via: "Google",
-  employability_score: [
-    {
-      user_id: "A",
-      employability_score: {
-        skillScore: 21.707777881622317,
-        totalScore: 55.988282321324476,
-        yearScore: 9.355069850316177,
-        degreeScore: 24.925434589385986,
-        industryScore: 0,
-      },
-    },
-  ],
-  skills: ["Spring", "Sql", "Api Gateway", "Spring Boot", "Integration"],
-  qualification: ["MS"],
-  experience: "0",
-  user_employability_score: {
-    skillScore: 21.707777881622317,
-    totalScore: 55.988282321324476,
-    yearScore: 9.355069850316177,
-    degreeScore: 24.925434589385986,
-    industryScore: 0,
-  },
-};
-
 const JobCard = (props) => {
+  const [hoverEffect, sethoverEffect] = useState([classes.overlay]);
+  const addOverlayHandler = () => {
+    console.log("Mouse Entered");
+    sethoverEffect([classes.overlay, classes.DisplayBlock]);
+  };
+
+  const removeOverlayHandler = () => {
+    sethoverEffect([classes.overlay, classes.DisplayNone]);
+  };
   return (
-    <div>
-      <div className={classes.card}>
-        <p className={classes.cardTitle}>{props.title}</p>
-        <p className={classes.cardCompany}>{props.company}</p>
+    <div className={classes.xyz}>
+      <div className={hoverEffect.join(" ")}>
+        <p>enter text</p>
+      </div>
+      <div
+        mouseleave={removeOverlayHandler}
+        mouseenter={addOverlayHandler}
+        className={classes.card}
+      >
+        <p className={classes.cardTitle}>
+          {props.data.title.length < 18
+            ? props.data.title
+            : props.data.title.substring(0, 18) + "..."}
+        </p>
+        <p className={classes.cardCompany}>{props.data.company}</p>
         <div className={classes.cardLocation}>
-          
-          <p><i class="fas fa-map-marked-alt"></i> {props.location}</p>
+          <p>
+            <i className="fas fa-map-marked-alt"></i> {props.data.location}
+          </p>
         </div>
 
         <div className={classes.skills}>
-        {
-          props.skills.slice(0,5).map( skill => {
-            return <p className={classes.cardSkills}>{skill}</p>
-          })
-        }
+          {props.data.skills.slice(0, 6).map((skill, index) => {
+            return (
+              <p key={index} className={classes.cardSkills}>
+                {skill.length > 8? skill.substring(0,6) + "..." : skill}
+              </p>
+            );
+          })}
         </div>
-        <p className={classes.cardExperience}>Experience Required: {props.experience}</p>
+        <p className={classes.cardExperience}>
+          Experience Required: {props.data.experience}
+        </p>
       </div>
     </div>
   );

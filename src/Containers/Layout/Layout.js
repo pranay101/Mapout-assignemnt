@@ -14,6 +14,7 @@ const Layout = () => {
   const jobs = useRef();
   const [showDiscover, setShowDiscover] = useState(false);
   const [dataFetchedViaAPI,setdataFetchedViaAPI] = useState("")
+  const [showJobs,setShowJobs] = useState(false)
 
 
 
@@ -30,8 +31,9 @@ const Layout = () => {
   //function to retrive data from <discover>
   const dataFetch = (data) =>{
     setdataFetchedViaAPI(data)
+    setShowJobs(true)
     // jobs.current.scrollIntoView(true)
-    console.log(data);
+    // console.log(data);
   }
 
   return (
@@ -47,7 +49,7 @@ const Layout = () => {
           {showDiscover ? <Discover dataFetchtoLayout={dataFetch} /> : null}
         </section>
         <section ref={jobs}>
-          { dataFetchedViaAPI.length > 0? <JobLayout data={dataFetchedViaAPI} /> : null}
+          { showJobs? <JobLayout data={dataFetchedViaAPI} /> : null}
         </section>
       </main>
     </div>

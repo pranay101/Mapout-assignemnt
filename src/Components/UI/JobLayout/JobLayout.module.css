@@ -1,0 +1,9 @@
+.JobLayout{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 20px 30px;
+    flex-grow: 1;
+}
