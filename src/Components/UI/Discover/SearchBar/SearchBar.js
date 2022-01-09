@@ -1,40 +1,19 @@
 import classes from "./SearchBar.module.css";
 import { useEffect, useState } from "react";
-import axios from "axios";
 
 const SearchBar = (props) => {
   const [keyword, setKeyword] = useState("");
 
   useEffect(() => {
     setTimeout(() => {
-      var data = JSON.stringify({
-        keyword: keyword,
-        location: props.location,
-      });
-
-      var config = {
-        method: "post",
-        url: "https://staging.mapout.com/mapout-node/api/getemployabilityscore",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        data: data,
-      };
-
-      axios(config)
-        .then(function (response) {
-          props.dataFetch(JSON.stringify(response.data));
-          // console.log(JSON.stringify(response.data));
-        })
-        .catch(function (error) {
-          console.log(error);
-        });
+      props.keywordFetch(keyword)
     }, 800);
 
     return () => {
       console.log("Cleaning up!!");
     };
-  }, [keyword]);
+  },[keyword]);
+
 
   const inputChangedHandler = (event) => {
     setKeyword(event.target.value);

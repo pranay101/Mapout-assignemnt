@@ -14,17 +14,18 @@ const CountryPicker = (props) => {
 
     // console.log(countries_list);
     setCountryListState(countries_list);
-  },[countries_list]);
+    props.onPicked(CountryValue)
+
+  },[CountryValue,CountryListState]);
 
   const CountrySelectorHandler = (event) => {
-    // console.log(event.target.value);
     setCountryValue(event.target.value);
-    props.onPicked(event.target.value)
   };
 
-  const renderCountry = (country) => {
+
+  const renderCountry = (country,index) => {
     return (
-      <option className={classes.Option} key={country} value={country}>
+      <option className={classes.Option} key={index} value={country}>
         {country}
       </option>
     );
@@ -37,8 +38,8 @@ const CountryPicker = (props) => {
       </p>
       <div className={classes.DropDown__container}>
         <select defaultValue={CountryValue} onChange={CountrySelectorHandler}>
-          {CountryListState.map((country) => {
-            return renderCountry(country);
+          {CountryListState.map((country,index) => {
+            return renderCountry(country,index);
           })}
         </select>
       </div>

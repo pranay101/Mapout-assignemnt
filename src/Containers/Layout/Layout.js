@@ -11,13 +11,28 @@ import { useState, useRef } from "react";
 
 const Layout = () => {
   const discover = useRef();
+  const jobs = useRef();
   const [showDiscover, setShowDiscover] = useState(false);
+  const [dataFetchedViaAPI,setdataFetchedViaAPI] = useState("")
 
+
+
+  // Handeling Get started button. 
   const gettingStartedHandler = () => {
     setShowDiscover((prevState) => !prevState);
+
+    //scrolling down to country picker
     discover.current.scrollIntoView(true)
-    // discover.current.scrollIntoView({ behavior: 'smooth',block: "start", inline: "nearest"})
+
   };
+
+
+  //function to retrive data from <discover>
+  const dataFetch = (data) =>{
+    setdataFetchedViaAPI(data)
+    // jobs.current.scrollIntoView(true)
+    console.log(data);
+  }
 
   return (
     <div className={classes.Layout}>
@@ -29,10 +44,10 @@ const Layout = () => {
           <Heading getStarted={gettingStartedHandler} />
         </section>
         <section ref={discover} >
-          {showDiscover ? <Discover /> : null}
+          {showDiscover ? <Discover dataFetchtoLayout={dataFetch} /> : null}
         </section>
-        <section>
-          <JobLayout />
+        <section ref={jobs}>
+          { dataFetchedViaAPI.length > 0? <JobLayout data={dataFetchedViaAPI} /> : null}
         </section>
       </main>
     </div>

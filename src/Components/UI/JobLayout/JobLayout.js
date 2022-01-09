@@ -4,7 +4,8 @@ import JobCard from "./Jobcard/Jobcard"
 const JobLayout = (props) =>{
     return(
         <div>
-            <JobCard />
+            {/* <JobCard /> */}
+            <p>jobs found</p>
         </div>
     )
 }
