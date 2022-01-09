@@ -1,7 +1,7 @@
 .Heading{
     font-family: 'Poppins', sans-serif;
-    margin: 50px auto;
-    padding: 20px auto;
+    margin: 0px auto;
+    /* padding: 20px auto; */
 }
 
 .Heading h3{
@@ -12,10 +12,37 @@
 
 .Heading h1{
     color: #da3ffc;
-    font-size: 4rem;
+    font-size: 3.6rem;
     font-weight: normal;
 }
-    
+
+
+.Heading p{
+    width: 50%;
+    text-align: center;
+    margin: 50px auto 10px auto;
+    font-size: 15px;
+}
+
+.Heading button{
+    color: #fff;
+    background-color: #da3ffc;
+    width: 15 rem;
+    padding: 15px 40px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    margin: 20px auto;
+    box-shadow: 0 1px 3px 0 rgba(49, 49, 49, 0.04);
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+}
+
+.Heading button:hover{
+    background-color: #4c494d;
+}
+
 
 .pinkBackground{
     background-color: #da3ffc;
@@ -33,6 +60,13 @@
         font-size: 2.5rem;
 
     }
+    .Heading p{
+        width: 80%;
+        font-size: 16px;
+        padding: 10px;
+        margin: 40px auto;
+        line-height: 2;
+    }
 }
 
 @media (max-width:450px) {
@@ -40,7 +74,14 @@
         font-size: 1.5rem;
     }
     .Heading h3{
-        font-size: 25px;
+        font-size: 30px;
+    }
+    .Heading p{
+        width: auto;
+        font-size: 12px;
+        padding: 10px;
+        margin: 40px 10px;
+        line-height: 2;
     }
 }
 

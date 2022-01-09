@@ -1,11 +1,11 @@
 .Layout{
     background-color: #f6dcfc;
     width: 100%;
-    height: auto;
+    height: 20%;
 }
 
 .Layout header{
-    padding: 20px 30px;
+    padding: 0px 30px;
 }
 
 .Layout main{

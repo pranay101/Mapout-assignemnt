@@ -1,9 +1,9 @@
 import classes from "./CountryPicker.module.css";
-import { useState, useEffect } from "react";
+import { useState, useEffect,useMemo } from "react";
 import Countries from "./Countries.json";
 
 const CountryPicker = (props) => {
-  const countries_list = [];
+  const countries_list = useMemo(()=> [],[]);
   const [CountryListState, setCountryListState] = useState([]);
   const [CountryValue, setCountryValue] = useState("Choose Your Country");
 
@@ -14,7 +14,7 @@ const CountryPicker = (props) => {
 
     // console.log(countries_list);
     setCountryListState(countries_list);
-  }, []);
+  },[countries_list]);
 
   const CountrySelectorHandler = (event) => {
     // console.log(event.target.value);

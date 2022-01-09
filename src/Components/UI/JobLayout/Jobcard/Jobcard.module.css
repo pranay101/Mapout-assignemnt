@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400");
+
+.card {
+  border-radius: 16px;
+  margin: 0 auto;
+  width: 300px;
+  max-width: 100%;
+  min-height: 300px;
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
+    0px 5px 8px 0px rgba(0, 0, 0, 0.14), 0px 1px 14px 0px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  background-color: #fff;
+  color: #0d0d0d;
+}
+h1 {
+  margin-bottom: 0.5em;
+  font-weight: inherit;
+  line-height: 1.2;
+  color: #1c5b72;
+  font-size: 2.618em;
+}
+@media (min-width: 800px) {
+  h1 {
+    font-size: 4.236em;
+    font-weight: 300;
+  }
+}
+p {
+  margin-bottom: 1.3em;
+  line-height: 1.618;
+}
+@media (min-width: 800px) {
+  p {
+    font-size: 1.3em;
+  }
+}
+a {
+  color: #e03616;
+  text-decoration: none;
+}
+
+.cardTitle {
+  font-size: 20px;
+  color: #fff;
+  background-color: #4c494d;
+  width: 70%;
+  text-align: center;
+  margin: 40px auto 10px auto;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.cardCompany {
+  font-size: 16px;
+  color: #4c494d;	
+}
+
+.cardLocation{
+	color: #4c494d;
+}
+
+.cardLocation p i{
+	color: #da3ffc;
+	padding: 5px;
+}
+
+.CardDes {
+  max-height: 70%;
+}
+
+.skills{
+	font-size: 12px;
+	color: white;
+}
+
+.skills p{
+	max-width: 60%;
+	display: inline-block;
+	padding: 5px 10px;
+	border-radius: 6px;
+}
+.cardSkills{
+	background-color: #da3ffc;
+	margin: 5px;
+}
+
+.cardExperience{
+	color: #4c494d;
+	font-size: 16px;
+}
