@@ -38,3 +38,10 @@
 .JobLayoutButton:hover{
     background-color: #4c494d;
 }
+
+
+@media (max-width:600px) {
+    .Master h1{
+        font-size: 40px;
+    }
+}

@@ -57,6 +57,14 @@
     font-weight: 500;
   }
 }
+@media (max-width: 500px) {
+  .SearchBar__container input {
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+    font-weight: 500;
+    width: 100%;
+  }
+}
 .SearchBar__container input::-webkit-input-placeholder {
   color: #5e5e5e;
   color: var(--color-SearchBar-placeholder, #5e5e5e);

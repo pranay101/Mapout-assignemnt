@@ -19,7 +19,7 @@ const SearchBar = (props) => {
   return (
     <div className={classes.SearchBar}>
       <p>
-        <span>Enter Some Keywords You're Looking for</span>
+        <span>Enter Some Keywords</span>
       </p>
       <div className={classes.SearchBar__container}>
         <input
