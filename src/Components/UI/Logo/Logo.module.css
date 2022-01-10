@@ -9,6 +9,7 @@
 
 .animation {
     font-size: 28px;
+    margin: -10px auto;
     display: inline-block;
     position: relative;
     color: #da3ffc;
@@ -22,7 +23,7 @@
     width: 100%;
     transform: scaleX(0);
     height: 3px;
-    bottom: 0;
+    bottom: 25px;
     left: 0;
     background-color: #da3ffc;
     transform-origin: bottom right;

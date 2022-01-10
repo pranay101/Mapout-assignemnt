@@ -12,11 +12,10 @@ const CountryPicker = (props) => {
       countries_list.push(Countries.countries[key].name);
     });
 
-    // console.log(countries_list);
     setCountryListState(countries_list);
-    props.onPicked(CountryValue)
+    props.countrySendtoDiscover(CountryValue)
 
-  },[CountryValue,CountryListState]);
+  },[CountryValue,CountryListState,props,countries_list]);
 
   const CountrySelectorHandler = (event) => {
     setCountryValue(event.target.value);

@@ -6,13 +6,11 @@ const SearchBar = (props) => {
 
   useEffect(() => {
     setTimeout(() => {
-      props.keywordFetch(keyword)
-    }, 800);
+      props.keywordSendtoDiscover(keyword)
+    }, 700);
 
-    return () => {
-      console.log("Cleaning up!!");
-    };
-  },[keyword]);
+    return;
+  },[keyword,props]);
 
 
   const inputChangedHandler = (event) => {

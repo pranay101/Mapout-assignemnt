@@ -3,7 +3,6 @@ import JobCard from "./Jobcard/Jobcard";
 import classes from "./JobLayout.module.css"
 
 const JobLayout = (props) => {
-  console.log(typeof(props.data));
   let result;
   if(!props.data)
      result = <p>No jobs found</p>

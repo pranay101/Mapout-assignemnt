@@ -21,50 +21,45 @@ const Discover = (props) => {
   };
 
   useEffect(() => {
-    setTimeout(() => {
-      var data = JSON.stringify({
-        keyword: keywordPicked,
-        location: countryPicked,
-      });
+    var data = JSON.stringify({
+      keyword: keywordPicked,
+      location: countryPicked,
+    });
 
-      if (keywordPicked && countryPicked) {
-        var config = {
-          method: "post",
-          url: "https://staging.mapout.com/mapout-node/api/getemployabilityscore",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          data: data,
-        };
+    if (keywordPicked && countryPicked) {
+      var config = {
+        method: "post",
+        url: "https://staging.mapout.com/mapout-node/api/getemployabilityscore",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        data: data,
+      };
 
-        axios(config)
-          .then(function (response) {
-            if(response.data.length === 0)
-              props.dataFetchtoLayout(null);
-
-
-            props.dataFetchtoLayout(response.data);
-            // props.dataFetchtoLayout(JSON.stringify(response.data));
-          })
-          .catch(function (error) {
-            console.log(error);
+      axios(config)
+        .then(function (response) {
+          props.dataSendtoLayout({
+            data:response.data,
+            keyword: keywordPicked,
+            country: countryPicked,
+            error:null,
           });
-      }
-    }, 800);
-
-    return () => {
-      console.log("Cleaning up!!");
-    };
+          // props.dataFetchtoLayout(JSON.stringify(response.data));
+        })
+        .catch(function (error) {
+          props.dataSendtoLayout({error:error})
+        });
+    }
   }, [countryPicked, keywordPicked]);
 
   return (
     <div className={classes.Discover}>
       <div className={classes.DiscoverElement}>
-        <CountryPicker onPicked={onCountryPickedHandler} />
+        <CountryPicker countrySendtoDiscover={onCountryPickedHandler} />
       </div>
       <div ref={searchbar} className={classes.DiscoverElement}>
         {countryPicked ? (
-          <SearchBar keywordFetch={onKeywordPickedHandler} />
+          <SearchBar keywordSendtoDiscover={onKeywordPickedHandler} />
         ) : null}
       </div>
     </div>

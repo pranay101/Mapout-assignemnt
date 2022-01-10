@@ -17,8 +17,8 @@ const JobCard = (props) => {
         <p>enter text</p>
       </div>
       <div
-        mouseleave={removeOverlayHandler}
-        mouseenter={addOverlayHandler}
+        // mouseleave={removeOverlayHandler}
+        // mouseenter={addOverlayHandler}
         className={classes.card}
       >
         <p className={classes.cardTitle}>
@@ -34,13 +34,20 @@ const JobCard = (props) => {
         </div>
 
         <div className={classes.skills}>
-          {props.data.skills.slice(0, 6).map((skill, index) => {
-            return (
-              <p key={index} className={classes.cardSkills}>
-                {skill.length > 8? skill.substring(0,6) + "..." : skill}
-              </p>
-            );
-          })}
+          {
+            props.data.skills?
+            (
+              props.data.skills.slice(0, 6).map((skill, index) => {
+                return (
+                  <p key={index} className={classes.cardSkills}>
+                    {skill.length > 8? skill.substring(0,6) + "..." : skill}
+                  </p>
+                  );}
+                )
+            ):(
+              <p><a href={props.data.website}>{props.data.website}</a></p>
+            )
+          }
         </div>
         <p className={classes.cardExperience}>
           Experience Required: {props.data.experience}

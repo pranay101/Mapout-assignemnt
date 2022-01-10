@@ -1,0 +1,56 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.ErrorBoundary {
+  position: fixed;
+  font-family: "Poppins", sans-serif;
+  top: 30vh;
+  left: 50vh;
+  z-index: 100;
+  overflow: hidden;
+  background-color: white;
+  border-radius: 10px;
+  width: 50%;
+}
+
+.ErrorBoundary header {
+  background-color: #4c494d;
+  width: 100%;
+  padding: 5px 5px;
+  text-align: center;
+  color: white;
+}
+
+.ErrorBoundary main {
+  padding: 5px;
+  font-size: 14px;
+}
+
+.ErrorBoundary footer {
+  text-align: center;
+}
+.ErrorBoundary footer button {
+  color: #fff;
+  background-color: #da3ffc;
+  width: 15 rem;
+  padding: 15px 40px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  margin: 20px auto;
+  box-shadow: 0 1px 3px 0 rgba(49, 49, 49, 0.04);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+}
+
+.ErrorBoundary footer button:hover {
+  background-color: #4c494d;
+}

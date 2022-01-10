@@ -1,7 +1,8 @@
 .Layout{
     background-color: #f6dcfc;
     width: 100%;
-    height: 20%;
+    min-height: 100vh;
+    height: auto;
 }
 
 .Layout header{

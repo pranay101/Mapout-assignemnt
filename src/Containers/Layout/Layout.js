@@ -3,41 +3,62 @@ import Logo from "../../Components/UI/Logo/Logo";
 import Heading from "../../Components/UI/Heading/Heading";
 import Discover from "../../Components/UI/Discover/Discover";
 import JobLayout from "../../Components/UI/JobLayout/JobLayout";
-import { useState, useRef } from "react";
+import ErrorBoundary from "../../Components/ErrorBoundary/ErrorBoundary";
+import { useState, useRef, useEffect } from "react";
 
-
-// const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop)  
-
+// const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop)
 
 const Layout = () => {
   const discover = useRef();
   const jobs = useRef();
   const [showDiscover, setShowDiscover] = useState(false);
-  const [dataFetchedViaAPI,setdataFetchedViaAPI] = useState("")
-  const [showJobs,setShowJobs] = useState(false)
+  const [dataFetchedViaAPI, setdataFetchedViaAPI] = useState({
+    keyword:null,
+    country:null,
+    error:null,
+    data:null
+  });
+  const [showJobs, setShowJobs] = useState(false);
+  const [error, setError] = useState();
 
-
-
-  // Handeling Get started button. 
+  // Handeling Get started button.
   const gettingStartedHandler = () => {
     setShowDiscover((prevState) => !prevState);
 
     //scrolling down to country picker
-    discover.current.scrollIntoView(true)
-
+    discover.current.scrollIntoView(true);
   };
 
-
   //function to retrive data from <discover>
-  const dataFetch = (data) =>{
-    setdataFetchedViaAPI(data)
-    setShowJobs(true)
-    // jobs.current.scrollIntoView(true)
-    // console.log(data);
-  }
+  const dataFetchtoLayout = (DataFromDiscover) => {
+    setdataFetchedViaAPI(DataFromDiscover.data);
+    setShowJobs(true);
+  };
+
+  const errorStateHandler = () => {
+    setError(null);
+  };
+
+  useEffect(() => {
+    console.log(dataFetchedViaAPI.data)
+    if (!dataFetchedViaAPI.data && dataFetchedViaAPI.country && dataFetchedViaAPI.keyword) {
+      setError({
+        title: "No Jobs Found",
+        description:
+          "We couldnt find any jobs about desired keyword in requested city. Kindly look for other Opportunities",
+      });
+    }
+  }, [dataFetchedViaAPI.error, dataFetchedViaAPI.country,dataFetchedViaAPI.data ,dataFetchedViaAPI.keyword]);
 
   return (
     <div className={classes.Layout}>
+      {dataFetchedViaAPI.error && (
+        <ErrorBoundary
+          title={error.title}
+          description={error.description}
+          onclick={errorStateHandler}
+        />
+      )}
       <header>
         <Logo />
       </header>
@@ -45,11 +66,11 @@ const Layout = () => {
         <section id="heading">
           <Heading getStarted={gettingStartedHandler} />
         </section>
-        <section ref={discover} >
-          {showDiscover ? <Discover dataFetchtoLayout={dataFetch} /> : null}
+        <section ref={discover}>
+          {showDiscover ? <Discover dataSendtoLayout={dataFetchtoLayout} /> : null}
         </section>
         <section ref={jobs}>
-          { showJobs? <JobLayout data={dataFetchedViaAPI} /> : null}
+          {showJobs ? <JobLayout data={dataFetchedViaAPI} /> : null}
         </section>
       </main>
     </div>
