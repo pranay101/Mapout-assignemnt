@@ -12,15 +12,13 @@ const JobCard = (props) => {
     sethoverEffect([classes.overlay, classes.DisplayNone]);
   };
   return (
-    <div className={classes.xyz}>
-      <div className={hoverEffect.join(" ")}>
-        <p>enter text</p>
+    <div>
+      <div className={classes.xyz}>
+        <div className={hoverEffect.join(" ")}>
+          <p>enter text</p>
+        </div>
       </div>
-      <div
-        // mouseleave={removeOverlayHandler}
-        // mouseenter={addOverlayHandler}
-        className={classes.card}
-      >
+      <div className={classes.card}>
         <p className={classes.cardTitle}>
           {props.data.title.length < 18
             ? props.data.title
@@ -34,20 +32,19 @@ const JobCard = (props) => {
         </div>
 
         <div className={classes.skills}>
-          {
-            props.data.skills?
-            (
-              props.data.skills.slice(0, 6).map((skill, index) => {
-                return (
-                  <p key={index} className={classes.cardSkills}>
-                    {skill.length > 8? skill.substring(0,6) + "..." : skill}
-                  </p>
-                  );}
-                )
-            ):(
-              <p><a href={props.data.website}>{props.data.website}</a></p>
-            )
-          }
+          {props.data.skills ? (
+            props.data.skills.slice(0, 6).map((skill, index) => {
+              return (
+                <p key={index} className={classes.cardSkills}>
+                  {skill.length > 8 ? skill.substring(0, 6) + "..." : skill}
+                </p>
+              );
+            })
+          ) : (
+            <p>
+              <a href={props.data.website}>{props.data.website}</a>
+            </p>
+          )}
         </div>
         <p className={classes.cardExperience}>
           Experience Required: {props.data.experience}

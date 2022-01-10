@@ -19,7 +19,7 @@ const Layout = () => {
     data:null
   });
   const [showJobs, setShowJobs] = useState(false);
-  const [error, setError] = useState();
+  const [error, setError] = useState({});
 
   // Handeling Get started button.
   const gettingStartedHandler = () => {
@@ -33,6 +33,9 @@ const Layout = () => {
   const dataFetchtoLayout = (DataFromDiscover) => {
     setdataFetchedViaAPI(DataFromDiscover.data);
     setShowJobs(true);
+    if(DataFromDiscover.error){
+      setError(DataFromDiscover.error)
+    }
   };
 
   const errorStateHandler = () => {
@@ -40,7 +43,6 @@ const Layout = () => {
   };
 
   useEffect(() => {
-    console.log(dataFetchedViaAPI.data)
     if (!dataFetchedViaAPI.data && dataFetchedViaAPI.country && dataFetchedViaAPI.keyword) {
       setError({
         title: "No Jobs Found",

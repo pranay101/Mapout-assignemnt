@@ -1,3 +1,14 @@
+
+.Master{
+    padding: 30px;
+}
+
+.Master h1{
+    font-size: 70px;
+    margin: 10px auto 60px auto;
+    font-weight: 400;
+    color: #4c494d;
+}
 .JobLayout{
     display: flex;
     align-items: flex-start;
@@ -6,4 +17,24 @@
     flex-wrap: wrap;
     margin: 20px 30px;
     flex-grow: 1;
+}
+
+.JobLayoutButton{
+    color: #fff;
+    background-color: #da3ffc;
+    width: 15 rem;
+    padding: 15px 40px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    margin: 40px auto;
+    box-shadow: 0 1px 3px 0 rgba(49, 49, 49, 0.04);
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    display: block;
+}
+
+.JobLayoutButton:hover{
+    background-color: #4c494d;
 }

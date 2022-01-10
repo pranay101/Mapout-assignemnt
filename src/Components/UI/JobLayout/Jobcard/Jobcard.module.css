@@ -12,10 +12,17 @@
   background-color: #fff;
   color: #0d0d0d;
 }
-.xyz :hover{
+
+
+.xyz{
   background-color: rgba(0, 0, 0, 0.301) ;
-  z-index: 500;
+  visibility: hidden;
   border-radius: 6px;
+  position: relative;
+
+}
+.xyz :hover{
+  visibility: visible;
 }
 
 
