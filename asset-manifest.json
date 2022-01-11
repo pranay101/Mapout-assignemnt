@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/pranay101/Mapout-assignemnt.git/static/css/main.2a706c9c.css",
-    "main.js": "/pranay101/Mapout-assignemnt.git/static/js/main.a3c11c5e.js",
-    "static/js/787.c1f116c0.chunk.js": "/pranay101/Mapout-assignemnt.git/static/js/787.c1f116c0.chunk.js",
-    "index.html": "/pranay101/Mapout-assignemnt.git/index.html",
-    "main.2a706c9c.css.map": "/pranay101/Mapout-assignemnt.git/static/css/main.2a706c9c.css.map",
-    "main.a3c11c5e.js.map": "/pranay101/Mapout-assignemnt.git/static/js/main.a3c11c5e.js.map",
-    "787.c1f116c0.chunk.js.map": "/pranay101/Mapout-assignemnt.git/static/js/787.c1f116c0.chunk.js.map"
+    "main.css": "/Mapout-assignemnt/static/css/main.2a706c9c.css",
+    "main.js": "/Mapout-assignemnt/static/js/main.9093fd47.js",
+    "static/js/787.c1f116c0.chunk.js": "/Mapout-assignemnt/static/js/787.c1f116c0.chunk.js",
+    "index.html": "/Mapout-assignemnt/index.html",
+    "main.2a706c9c.css.map": "/Mapout-assignemnt/static/css/main.2a706c9c.css.map",
+    "main.9093fd47.js.map": "/Mapout-assignemnt/static/js/main.9093fd47.js.map",
+    "787.c1f116c0.chunk.js.map": "/Mapout-assignemnt/static/js/787.c1f116c0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2a706c9c.css",
-    "static/js/main.a3c11c5e.js"
+    "static/js/main.9093fd47.js"
   ]
 }
