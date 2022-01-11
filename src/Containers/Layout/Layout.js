@@ -33,7 +33,9 @@ const Layout = () => {
   //function to retrive data from <discover>
   const dataFetchtoLayout = (DataFromDiscover) => {
     setdataFetchedViaAPI(DataFromDiscover.data);
-    setShowJobs(true);
+    if (DataFromDiscover.data) {
+      setShowJobs(true);
+    }
     if(DataFromDiscover.error){
       setError(DataFromDiscover.error)
     }

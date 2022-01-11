@@ -20,9 +20,9 @@ const JobCard = (props) => {
       </div>
       <div className={classes.card}>
         <p className={classes.cardTitle}>
-          {props.data.title.length < 18
+          {props.data.title.length < 15
             ? props.data.title
-            : props.data.title.substring(0, 18) + "..."}
+            : props.data.title.substring(0, 15) + "..."}
         </p>
         <p className={classes.cardCompany}>{props.data.company}</p>
         <div className={classes.cardLocation}>
@@ -33,10 +33,10 @@ const JobCard = (props) => {
 
         <div className={classes.skills}>
           {props.data.skills ? (
-            props.data.skills.slice(0, 6).map((skill, index) => {
+            props.data.skills.slice(0, 5).map((skill, index) => {
               return (
                 <p key={index} className={classes.cardSkills}>
-                  {skill.length > 8 ? skill.substring(0, 6) + "..." : skill}
+                  {skill.length > 8 ? skill.substring(0, 5) + "..." : skill}
                 </p>
               );
             })
@@ -49,6 +49,7 @@ const JobCard = (props) => {
         <p className={classes.cardExperience}>
           Experience Required: {props.data.experience}
         </p>
+        <button>More Info</button>
       </div>
     </div>
   );

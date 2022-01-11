@@ -2,13 +2,14 @@ import React, { useState, useRef, useEffect } from "react";
 import classes from "./Discover.module.css";
 import SearchBar from "./SearchBar/SearchBar";
 import CountryPicker from "./CountryPicker/CountryPicker";
+import Spinner from "../Spinner/Spinner";
 import axios from "axios";
 
 const Discover = (props) => {
   // State Variable. which on changing will reload the eniter component
   const [countryPicked, setCountryPicked] = useState(null);
   const [keywordPicked, setkeywordPicked] = useState(null);
-
+  const [showSpinner,setShowSpinner] = useState(false)
   const searchbar = useRef();
 
   const onCountryPickedHandler = (selectedCountry) => {
@@ -27,6 +28,7 @@ const Discover = (props) => {
     });
 
     if (keywordPicked && countryPicked) {
+      setShowSpinner(true)
       var config = {
         method: "post",
         url: "https://staging.mapout.com/mapout-node/api/getemployabilityscore",
@@ -38,6 +40,7 @@ const Discover = (props) => {
 
       axios(config)
         .then(function (response) {
+          setShowSpinner(false)
           props.dataSendtoLayout({
             data:response.data,
             keyword: keywordPicked,
@@ -47,6 +50,7 @@ const Discover = (props) => {
           // props.dataFetchtoLayout(JSON.stringify(response.data));
         })
         .catch(function (error) {
+          setShowSpinner(false)
           props.dataSendtoLayout({error:error})
         });
     }
@@ -61,6 +65,10 @@ const Discover = (props) => {
         {countryPicked ? (
           <SearchBar keywordSendtoDiscover={onKeywordPickedHandler} />
         ) : null}
+      </div>
+      
+      <div>
+          { showSpinner? <Spinner title="Loading...." /> : null}
       </div>
     </div>
   );
