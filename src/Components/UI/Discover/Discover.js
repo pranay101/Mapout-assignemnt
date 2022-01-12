@@ -9,7 +9,7 @@ const Discover = (props) => {
   // State Variable. which on changing will reload the eniter component
   const [countryPicked, setCountryPicked] = useState(null);
   const [keywordPicked, setkeywordPicked] = useState(null);
-  const [showSpinner,setShowSpinner] = useState(false)
+  const [showSpinner, setShowSpinner] = useState(false);
   const searchbar = useRef();
 
   const onCountryPickedHandler = (selectedCountry) => {
@@ -28,7 +28,7 @@ const Discover = (props) => {
     });
 
     if (keywordPicked && countryPicked) {
-      setShowSpinner(true)
+      setShowSpinner(true);
       var config = {
         method: "post",
         url: "https://staging.mapout.com/mapout-node/api/getemployabilityscore",
@@ -37,23 +37,26 @@ const Discover = (props) => {
         },
         data: data,
       };
-
+      console.log(keywordPicked,countryPicked);
       axios(config)
         .then(function (response) {
-          setShowSpinner(false)
+          setShowSpinner(false);
           props.dataSendtoLayout({
-            data:response.data,
+            data: response.data,
             keyword: keywordPicked,
             country: countryPicked,
-            error:null,
+            statusCode: response.status,
           });
           // props.dataFetchtoLayout(JSON.stringify(response.data));
         })
         .catch(function (error) {
-          setShowSpinner(false)
-          props.dataSendtoLayout({error:error})
+          setShowSpinner(false);
+          props.errorOccuredDuringAPIRequest(error);
         });
     }
+    return () => {
+      console.log("waiting");
+    };
     // eslint-disable-next-line
   }, [countryPicked, keywordPicked]);
 
@@ -67,10 +70,8 @@ const Discover = (props) => {
           <SearchBar keywordSendtoDiscover={onKeywordPickedHandler} />
         ) : null}
       </div>
-      
-      <div>
-          { showSpinner? <Spinner title="Loading...." /> : null}
-      </div>
+
+      <div>{showSpinner ? <Spinner title="Loading...." /> : null}</div>
     </div>
   );
 };

@@ -9,7 +9,7 @@ const SearchBar = (props) => {
       props.keywordSendtoDiscover(keyword)
     }, 700);
 
-    return;
+    return{};
   },[keyword,props]);
 
 

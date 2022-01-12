@@ -34,7 +34,7 @@ const OverlayDialogueBox = (props) => {
             </div>
             <div className={classes.skills}>
               {props.data.qualification ? (
-                <h2 className={classes.textcolorGray}>qualification Required{props.data.qualification}</h2>
+                <h2 className={classes.textcolorGray}>qualification Required</h2>
               ) : null}
               {props.data.qualification
                 ? props.data.qualification.map((qualification, index) => {
@@ -65,9 +65,17 @@ const OverlayDialogueBox = (props) => {
                 : null}
             </div>
             <div>
-              <p>
-                <a href={props.data.website}>{props.data.website}</a>
-              </p>
+              {
+                props.data.website? (<p>
+                  <a target="_blank" rel="noopener noreferrer" href={ "https://"+ props.data.website}>Website :- {props.data.website}</a>
+                </p>) : null
+              }
+              {
+                props.data.link? (<p>
+                  <a target="_blank" rel="noopener noreferrer" href={ props.data.link}>Apply Here :- {props.data.website}</a>
+                </p>) : null
+              }
+              
             </div>
           </div>
         </main>
