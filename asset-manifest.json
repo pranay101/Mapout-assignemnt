@@ -1,15 +1,24 @@
 {
   "files": {
-    "main.css": "/Mapout-assignemnt/static/css/main.2a706c9c.css",
-    "main.js": "/Mapout-assignemnt/static/js/main.9093fd47.js",
-    "static/js/787.c1f116c0.chunk.js": "/Mapout-assignemnt/static/js/787.c1f116c0.chunk.js",
+    "main.css": "/Mapout-assignemnt/static/css/main.f70c52d0.chunk.css",
+    "main.js": "/Mapout-assignemnt/static/js/main.cc582bc0.chunk.js",
+    "main.js.map": "/Mapout-assignemnt/static/js/main.cc582bc0.chunk.js.map",
+    "runtime-main.js": "/Mapout-assignemnt/static/js/runtime-main.5883a028.js",
+    "runtime-main.js.map": "/Mapout-assignemnt/static/js/runtime-main.5883a028.js.map",
+    "static/js/2.95d09dda.chunk.js": "/Mapout-assignemnt/static/js/2.95d09dda.chunk.js",
+    "static/js/2.95d09dda.chunk.js.map": "/Mapout-assignemnt/static/js/2.95d09dda.chunk.js.map",
+    "static/js/3.ebeef9ad.chunk.js": "/Mapout-assignemnt/static/js/3.ebeef9ad.chunk.js",
+    "static/js/3.ebeef9ad.chunk.js.map": "/Mapout-assignemnt/static/js/3.ebeef9ad.chunk.js.map",
     "index.html": "/Mapout-assignemnt/index.html",
-    "main.2a706c9c.css.map": "/Mapout-assignemnt/static/css/main.2a706c9c.css.map",
-    "main.9093fd47.js.map": "/Mapout-assignemnt/static/js/main.9093fd47.js.map",
-    "787.c1f116c0.chunk.js.map": "/Mapout-assignemnt/static/js/787.c1f116c0.chunk.js.map"
+    "precache-manifest.9d83feb53273e05c8c6f36574f473531.js": "/Mapout-assignemnt/precache-manifest.9d83feb53273e05c8c6f36574f473531.js",
+    "service-worker.js": "/Mapout-assignemnt/service-worker.js",
+    "static/css/main.f70c52d0.chunk.css.map": "/Mapout-assignemnt/static/css/main.f70c52d0.chunk.css.map",
+    "static/js/2.95d09dda.chunk.js.LICENSE.txt": "/Mapout-assignemnt/static/js/2.95d09dda.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/css/main.2a706c9c.css",
-    "static/js/main.9093fd47.js"
+    "static/js/runtime-main.5883a028.js",
+    "static/js/2.95d09dda.chunk.js",
+    "static/css/main.f70c52d0.chunk.css",
+    "static/js/main.cc582bc0.chunk.js"
   ]
 }
