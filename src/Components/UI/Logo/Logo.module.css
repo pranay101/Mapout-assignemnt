@@ -1,5 +1,5 @@
 .Logo{
-    color: #da3ffc;
+    color: #cd8764;
     /* font-family: 'Open Sans', sans-serif; */
     font-family: 'Poppins', sans-serif;
     width: auto;
@@ -12,7 +12,7 @@
     margin: -10px auto;
     display: inline-block;
     position: relative;
-    color: #da3ffc;
+    color: #cd8764;
     cursor: pointer;
     font-weight: 700;
   }
@@ -25,7 +25,7 @@
     height: 3px;
     bottom: 25px;
     left: 0;
-    background-color: #da3ffc;
+    background-color: #cd8764;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
   }

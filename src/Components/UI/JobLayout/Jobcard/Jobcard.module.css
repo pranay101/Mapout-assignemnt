@@ -78,7 +78,7 @@ a {
 }
 
 .cardLocation p i{
-	color: #da3ffc;
+	color: #cd8764;
 	padding: 5px;
 }
 
@@ -98,7 +98,7 @@ a {
 	border-radius: 6px;
 }
 .cardSkills{
-	background-color: #da3ffc;
+	background-color: #cd8764;
 	margin: 5px;
 }
 
@@ -141,7 +141,7 @@ a {
 
 .card button{
   color: #fff;
-  background-color: #da3ffc;
+  background-color: #cd8764;
   width: 15 rem;
   padding: 5px 15px 5px 15px;
   box-sizing: border-box;

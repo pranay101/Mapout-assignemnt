@@ -11,7 +11,7 @@
 }
 
 .Heading h1{
-    color: #da3ffc;
+    color: #cd8764;
     font-size: 3.6rem;
     font-weight: normal;
 }
@@ -26,7 +26,7 @@
 
 .Heading button{
     color: #fff;
-    background-color: #da3ffc;
+    background-color: #cd8764;
     width: 15 rem;
     padding: 15px 40px;
     box-sizing: border-box;
@@ -45,7 +45,7 @@
 
 
 .pinkBackground{
-    background-color: #da3ffc;
+    background-color: #cd8764;
     border-radius: 10px;
     color: white;
     padding: 10px ;

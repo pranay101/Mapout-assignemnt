@@ -38,7 +38,7 @@
   flex: 1;
   border-radius: 6px;
   background: transparent;
-  border: #e99bfa 1px solid;
+  border: #fdc7ab 1px solid;
   color: #1a1a1a;
   padding: 0.9rem 1.25rem;
   z-index: 1;
@@ -48,7 +48,7 @@
 }
 
 .SearchBar__container input:focus {
-  border-color: #da3ffc;
+  border-color: #cd8764;
 }
 @media (max-width: 849px) {
   .SearchBar__container input {
@@ -127,6 +127,6 @@
 }
 
 .SearchBar p span {
-  background-color: #f6dcfc;
+  background-color: #f3cdbb;
   padding: 0 10px;
 }
