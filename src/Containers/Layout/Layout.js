@@ -13,6 +13,7 @@ const Layout = () => {
   const discover = useRef();
   const jobs = useRef();
   const [showDiscover, setShowDiscover] = useState(false);
+  const [hideGetStartedButton, sethideGetStartedButton] = useState(true);
   const [dataFetchedViaAPI, setdataFetchedViaAPI] = useState({
     keyword: null,
     country: null,
@@ -26,8 +27,12 @@ const Layout = () => {
   const gettingStartedHandler = () => {
     setShowDiscover((prevState) => !prevState);
 
+
     //scrolling down to country picker
     discover.current.scrollIntoView(true);
+
+    //hide the get started button
+    sethideGetStartedButton(false)
   };
 
   //function to retrive data from <discover>
@@ -68,7 +73,7 @@ const Layout = () => {
       </header>
       <main>
         <section id="heading">
-          <Heading getStarted={gettingStartedHandler} />
+          <Heading hideGetStartedButton={hideGetStartedButton} getStarted={gettingStartedHandler} />
         </section>
         <section ref={discover}>
           {showDiscover ? (
