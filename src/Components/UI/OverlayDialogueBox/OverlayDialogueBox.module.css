@@ -1,0 +1,130 @@
+/* .OverlayDialogueBox {
+  height: 400px;
+  width: 400px;
+} */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.OverlayDialogueBox {
+  position: fixed;
+  font-family: "Poppins", sans-serif;
+  margin: auto;
+  top: 5vh;
+  left: 10vh;
+  z-index: 100;
+  overflow: scroll;
+  background-color: white;
+  border-radius: 10px;
+  width: 90%;
+  height:90%;
+}
+
+.OverlayDialogueBox header {
+  background-color: #4c494d;
+  width: 100%;
+  padding: 5px 5px;
+  text-align: center;
+  color: white;
+}
+
+.OverlayDialogueBox main {
+  display: flex;
+  flex-direction: row;
+  font-weight: 600;
+  padding: 10px;
+}
+
+.thirtyPercentOfTotalWIdth {
+  width: 30%;
+}
+.seventyPercentOfTotalWIdth {
+  width: 70%;
+}
+
+.seventyPercentOfTotalWIdth span{
+padding: 10px;
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+}
+
+.seventyPercentOfTotalWIdth span p{
+  margin: auto 20px;
+  padding: auto 10px;
+  font-size: 16px;
+  font-weight: normal;
+}
+.OverlayDialogueBox p {
+  padding: 5px;
+  font-size: 13px;
+}
+
+.OverlayDialogueBox footer {
+  text-align: center;
+}
+.OverlayDialogueBox footer button {
+  color: #fff;
+  background-color: #da3ffc;
+  width: 15 rem;
+  padding: 15px 40px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  margin: 20px auto;
+  box-shadow: 0 1px 3px 0 rgba(49, 49, 49, 0.04);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+}
+
+.OverlayDialogueBox footer button:hover {
+  background-color: #4c494d;
+}
+
+.skills {
+  font-size: 12px;
+  color: white;
+}
+
+.skills p {
+  max-width: 60%;
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 6px;
+}
+.cardSkills {
+  background-color: #da3ffc;
+  margin: 5px;
+}
+
+.comanyLogo{
+  max-height: 90px;
+}
+
+.cardLocation{
+  color: #da3ffc;
+  text-align: center;
+  font-weight: normal;
+}
+
+.cardLocation{
+  font-size: 26px;
+}
+
+.description{
+  margin: auto 20px;
+  text-align: left;
+  font-weight: normal;
+}
+
+.textcolorGray{
+  color: #4c494d;
+}

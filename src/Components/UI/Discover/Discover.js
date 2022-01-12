@@ -54,6 +54,7 @@ const Discover = (props) => {
           props.dataSendtoLayout({error:error})
         });
     }
+    // eslint-disable-next-line
   }, [countryPicked, keywordPicked]);
 
   return (

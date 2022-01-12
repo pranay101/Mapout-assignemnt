@@ -1,23 +1,19 @@
-import { useState } from "react";
+
 import classes from "./Jobcard.module.css";
+import OverlayDialogueBox from "../../OverlayDialogueBox/OverlayDialogueBox";
+import  React , { useState } from "react";
 
 const JobCard = (props) => {
-  const [hoverEffect, sethoverEffect] = useState([classes.overlay]);
-  const addOverlayHandler = () => {
-    console.log("Mouse Entered");
-    sethoverEffect([classes.overlay, classes.DisplayBlock]);
-  };
 
-  const removeOverlayHandler = () => {
-    sethoverEffect([classes.overlay, classes.DisplayNone]);
-  };
+  const [showOverlayDialogueBox,setshowOverlayDialogueBox] = useState(false);
+  const moreInfoClickedHandler = () =>{
+    setshowOverlayDialogueBox(prevState =>{
+      return !prevState;
+    })
+  }
   return (
     <div>
-      <div className={classes.xyz}>
-        <div className={hoverEffect.join(" ")}>
-          <p>enter text</p>
-        </div>
-      </div>
+      {showOverlayDialogueBox? <OverlayDialogueBox data = {props.data} dismiss={setshowOverlayDialogueBox} /> : null}
       <div className={classes.card}>
         <p className={classes.cardTitle}>
           {props.data.title.length < 15
@@ -49,7 +45,7 @@ const JobCard = (props) => {
         <p className={classes.cardExperience}>
           Experience Required: {props.data.experience}
         </p>
-        <button>More Info</button>
+        <button onClick={moreInfoClickedHandler}>More Info</button>
       </div>
     </div>
   );

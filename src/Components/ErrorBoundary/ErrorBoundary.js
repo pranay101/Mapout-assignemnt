@@ -1,4 +1,5 @@
 import classes from "./ErrorBoundary.module.css";
+import React from "react";
 
 const ErrorBoundary = (props) => {
   return (

@@ -1,10 +1,10 @@
 import classes from "./Layout.module.css";
+import React from "react"
 import Logo from "../../Components/UI/Logo/Logo";
 import Heading from "../../Components/UI/Heading/Heading";
 import Discover from "../../Components/UI/Discover/Discover";
 import JobLayout from "../../Components/UI/JobLayout/JobLayout";
 import ErrorBoundary from "../../Components/ErrorBoundary/ErrorBoundary";
-import Spinner from "../../Components/UI/Spinner/Spinner";
 import { useState, useRef, useEffect } from "react";
 
 // const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop)

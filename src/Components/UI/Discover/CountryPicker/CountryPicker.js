@@ -1,5 +1,5 @@
 import classes from "./CountryPicker.module.css";
-import { useState, useEffect,useMemo } from "react";
+import React,{ useState, useEffect,useMemo } from "react";
 import Countries from "./Countries.json";
 
 const CountryPicker = (props) => {
@@ -15,7 +15,7 @@ const CountryPicker = (props) => {
     setCountryListState(countries_list);
     props.countrySendtoDiscover(CountryValue)
 
-  },[CountryValue,CountryListState,props,countries_list]);
+  },[CountryValue,props,countries_list]);
 
   const CountrySelectorHandler = (event) => {
     setCountryValue(event.target.value);

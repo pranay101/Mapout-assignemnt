@@ -3,7 +3,6 @@ import JobCard from "./Jobcard/Jobcard";
 import classes from "./JobLayout.module.css";
 
 const JobLayout = (props) => {
-  const [jobList, setJobList] = useState([]);
   const [upperlimit, setUpperLimit] = useState(21);
 
   let result;
@@ -21,7 +20,8 @@ const JobLayout = (props) => {
   };
   return (
     <div className={classes.Master}>
-      <h1>Jobs we Found</h1>
+      {props.data.length > 0 ? <h1>Jobs we Found</h1> : <h1>No Jobs Found</h1> }
+      
       <div className={classes.JobLayout}>
         {result}
       </div>

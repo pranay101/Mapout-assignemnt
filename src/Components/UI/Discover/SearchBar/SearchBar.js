@@ -1,5 +1,5 @@
 import classes from "./SearchBar.module.css";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const SearchBar = (props) => {
   const [keyword, setKeyword] = useState("");
