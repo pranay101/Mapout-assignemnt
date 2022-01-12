@@ -14,3 +14,9 @@
     position: relative;
     text-align: center;
 }
+
+@media (max-width:540px) {
+    .Layout main{
+        margin: 50% auto;
+    }
+}

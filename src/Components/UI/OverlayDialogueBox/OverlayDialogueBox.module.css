@@ -25,6 +25,7 @@
   border-radius: 10px;
   width: 90%;
   height:90%;
+  font-weight: normal;
 }
 
 .OverlayDialogueBox header {
@@ -54,6 +55,7 @@ padding: 10px;
  display: flex;
  flex-direction: row;
  align-items: center;
+ font-weight: normal !important;
 }
 
 .seventyPercentOfTotalWIdth span p{
@@ -109,15 +111,6 @@ padding: 10px;
   max-height: 90px;
 }
 
-.cardLocation{
-  color: #da3ffc;
-  text-align: center;
-  font-weight: normal;
-}
-
-.cardLocation{
-  font-size: 26px;
-}
 
 .description{
   margin: auto 20px;
@@ -127,4 +120,35 @@ padding: 10px;
 
 .textcolorGray{
   color: #4c494d;
+}
+
+.fontweightnormal{
+  font-weight: normal !important;
+}
+
+
+@media (max-width:800px) {
+  .OverlayDialogueBox{
+    left: 5vh;
+    max-width: 80%;
+  }
+  .OverlayDialogueBox main{
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+  }
+  .seventyPercentOfTotalWIdth{
+    width: 100%;
+  }
+  .seventyPercentOfTotalWIdth span{
+    flex-direction: column;
+    margin: auto 5px;
+    padding: 5px;
+  }
+  .thirtyPercentOfTotalWIdth{
+    width: 100%;
+  }
+  .description{
+    text-align: center;
+  }
 }

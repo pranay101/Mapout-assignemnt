@@ -32,7 +32,21 @@ const OverlayDialogueBox = (props) => {
                 <i className="fas fa-map-marked-alt"></i> {props.data.location}
               </p>
             </div>
-            <p></p>
+            <div className={classes.skills}>
+              {props.data.qualification ? (
+                <h2 className={classes.textcolorGray}>qualification Required{props.data.qualification}</h2>
+              ) : null}
+              {props.data.qualification
+                ? props.data.qualification.map((qualification, index) => {
+                    return (
+                      <p key={index} className={classes.cardSkills}>
+                        {qualification}
+                      </p>
+                    );
+                  })
+                : null}
+            </div>
+            <p className={classes.fontweightnormal}>Posted: {props.data.postingDate}</p>
           </div>
           <span></span>
           <div className={classes.thirtyPercentOfTotalWIdth}>
@@ -57,6 +71,9 @@ const OverlayDialogueBox = (props) => {
             </div>
           </div>
         </main>
+        <footer>
+          <button onClick={dismissOverlayDialogueBoxHandler}>Close</button>
+        </footer>
       </div>
       <div
         onClick={dismissOverlayDialogueBoxHandler}
