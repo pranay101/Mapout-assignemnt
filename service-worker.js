@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Mapout-assignemnt/precache-manifest.c940097075d7d2440f406da5d6b12bc7.js"
+  "/Mapout-assignemnt/precache-manifest.c9d9d376ad9b36796d6ff8a3c822257a.js"
 );
 
 self.addEventListener('message', (event) => {
