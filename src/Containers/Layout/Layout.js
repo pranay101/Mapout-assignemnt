@@ -7,7 +7,6 @@ import JobLayout from "../../Components/UI/JobLayout/JobLayout";
 import ErrorBoundary from "../../Components/ErrorBoundary/ErrorBoundary";
 import { useState, useRef } from "react";
 
-// const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop)
 
 const Layout = () => {
   const discover = useRef();
@@ -39,14 +38,20 @@ const Layout = () => {
   const dataFetchtoLayout = (DataFromDiscover) => {
     console.log(DataFromDiscover);
     setdataFetchedViaAPI(DataFromDiscover.data);
+
+    // if we get data then show the card
     if (DataFromDiscover.data) {
       setShowJobs(true);
     }
+
+    // if any error pass it to error boundries
     if (dataFetchedViaAPI.Error) {
       setError(dataFetchedViaAPI.Error);
     }
   };
 
+
+  // function to retrive error from discover
   const ifErrorOccuredDuringAPIRequest = (error) => {
     setError({
       iserror: true,
@@ -55,6 +60,8 @@ const Layout = () => {
     });
   };
 
+
+  // disable overlay error box
   const errorStateHandler = () => {
     setError(null);
   };
